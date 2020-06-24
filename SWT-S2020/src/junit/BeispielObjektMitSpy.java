@@ -5,22 +5,22 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 /**
- * @author Tino Böhmke
+ * @author TiXX BÃ¶hXXX
  * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514997@beuth-hochschule.de
- * @MatrikelNummer: 776097
+ * @s514XXX@beuth-hochschule.de
+ * @MatrikelNummer: 776XXX
  * @Datum 24.06.2019
  */
 
 public class BeispielObjektMitSpy {
 
 	/**
-	 * kleines Beispiel für Zugriffsberechtigung. Der Spy soll in diesem Fall
-	 * prüfen, ob die Methode PermissionChecker ausgeführt wurde
+	 * kleines Beispiel fÃ¼r Zugriffsberechtigung. Der Spy soll in diesem Fall
+	 * prÃ¼fen, ob die Methode PermissionChecker ausgefÃ¼hrt wurde
 	 */
 
 	private PermissionChecker permissionChecker = Mockito.spy(new PermissionChecker()); // Mockito.spy legt den Proxy
-	// außen rum
+	// auÃŸen rum
 
 	@Test
 	public void testVerify() {
@@ -49,7 +49,7 @@ public class BeispielObjektMitSpy {
 
 		private String currentUserRole = "Admin";
 
-		// prüft, wenn Nutzer Rolle nicht Admin, dann keinen Zugriff
+		// prÃ¼ft, wenn Nutzer Rolle nicht Admin, dann keinen Zugriff
 
 		void checkHasPermisson() {
 			if (!currentUserRole.equals("Admin")) {
