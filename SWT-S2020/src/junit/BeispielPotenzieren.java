@@ -2,17 +2,17 @@
 package junit;
 
 /**
- * @author Tino Böhmke
+ * @author TiXX BÃ¶hXXX
  * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514997@beuth-hochschule.de
- * @MatrikelNummer: 776097
+ * @s514XXX@beuth-hochschule.de
+ * @MatrikelNummer: 776XXX
  * @Datum 22.06.2019
  */
 
 public class BeispielPotenzieren {
 
 	/**
-	 * zweites kleies Beispiel, dieses mal für potenzierte Rechenoperationen 
+	 * zweites kleies Beispiel, dieses mal fÃ¼r potenzierte Rechenoperationen 
 	 */
 
 	private String Aufgabe;
