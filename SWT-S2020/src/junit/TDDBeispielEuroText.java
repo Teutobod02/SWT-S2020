@@ -21,7 +21,7 @@ public class TDDBeispielEuroText {
 	@Test
 	public final void whenStringIsSubmittedThenNoExceptionIsThrown() {
 		Assert.assertEquals(true, Character.isLetter('A'));
-		// prüfen ob übergebenes Value ein Buchstabe ist
+		// prüfen ob übergebenes Char ein Buchstabe ist
 		Assert.assertTrue(true);
 
 	}
@@ -29,7 +29,7 @@ public class TDDBeispielEuroText {
 	@Test
 	public final void whenWhitespacesareSubmittedThenNoExceptionIsThrown() {
 		Assert.assertEquals(true, Character.isSpaceChar(' '));
-		// prüfen ob übergebenes Value ein Leerzeichen ist, die bezahle ich nicht
+		// prüfen ob übergebenes Char ein Leerzeichen ist, die bezahle ich nicht
 		Assert.assertTrue(true);
 
 	}
