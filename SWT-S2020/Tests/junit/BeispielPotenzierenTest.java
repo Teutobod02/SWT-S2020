@@ -5,17 +5,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author Tino Böhmke
+ * @author TiXX BÃ¶hXXX
  * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514997@beuth-hochschule.de
- * @MatrikelNummer: 776097
+ * @s514XXX@beuth-hochschule.de
+ * @MatrikelNummer: 776XXX
  * @Datum 21.06.2019
  */
 
 public class BeispielPotenzierenTest {
 
 	/**
-	 * zweites kleier Test für meine potenzierte Rechenoperationen
+	 * zweites kleier Test fÃ¼r meine potenzierte Rechenoperationen
 	 */
 
 	private BeispielPotenzieren beispielPotenzieren;
@@ -28,7 +28,7 @@ public class BeispielPotenzierenTest {
 	@Test
 	public void testKonstruktor() {
 		assertEquals("Durch den Konstruktor darf keine Aufgabe gesetzt sein.", null,
-				// prüft ob der Konstruktur wirklich keine weiteren Augaben ausführen soll
+				// prÃ¼ft ob der Konstruktur wirklich keine weiteren Augaben ausfÃ¼hren soll
 				beispielPotenzieren.getAufgabe());
 	}
 
@@ -36,7 +36,7 @@ public class BeispielPotenzierenTest {
 
 	public void testgetAndSetAufgabe() {
 		beispielPotenzieren.setAufgabe("Quadrat");
-		// prüft ob die Methode getAufgabe die gewünschte myMethod (Quadrat) zurück gibt
+		// prÃ¼ft ob die Methode getAufgabe die gewÃ¼nschte myMethod (Quadrat) zurÃ¼ck gibt
 		assertEquals("Produkt muss 'Quadrat' sein.", "Quadrat", beispielPotenzieren.getAufgabe());
 	}
 
@@ -46,7 +46,7 @@ public class BeispielPotenzierenTest {
 	 */
 	public void testProdukt() throws Exception {
 		beispielPotenzieren.setAufgabe("Produkt");
-		// prüft die Berechnung eines Produktes mit einer in die Methode gegebenen Zahl
+		// prÃ¼ft die Berechnung eines Produktes mit einer in die Methode gegebenen Zahl
 		// * 2
 		assertTrue("Produkt von '4x2' muss '8' sein.", 8 == beispielPotenzieren.myMethod(4));
 	}
@@ -57,7 +57,7 @@ public class BeispielPotenzierenTest {
 	@Test
 	public void testQuadrat() throws Exception {
 		beispielPotenzieren.setAufgabe("Quadrat");
-		// prüft die Berechnung des Quadrats einer gegebenen Zahl
+		// prÃ¼ft die Berechnung des Quadrats einer gegebenen Zahl
 		assertTrue("Quadrat von '4' muss '16' sein.", 16 == beispielPotenzieren.myMethod(4));
 	}
 
@@ -67,7 +67,7 @@ public class BeispielPotenzierenTest {
 	@Test
 	public void testWurzel() throws Exception {
 		beispielPotenzieren.setAufgabe("Wurzel");
-		// prüft das Ziehen der Wurzel aus einer gegebenen Zahl
+		// prÃ¼ft das Ziehen der Wurzel aus einer gegebenen Zahl
 		assertTrue("Wurzel von '4' muss '2' sein.", 2 == beispielPotenzieren.myMethod(4));
 	}
 
@@ -77,7 +77,7 @@ public class BeispielPotenzierenTest {
 	@Test(expected = Exception.class)
 	public void testUnbekannteAufgabe() throws Exception {
 		beispielPotenzieren.setAufgabe("Undefiniert");
-		// prüft das Handling von Unbekannten Aufgaben
+		// prÃ¼ft das Handling von Unbekannten Aufgaben
 		beispielPotenzieren.myMethod(4);
 	}
 }
