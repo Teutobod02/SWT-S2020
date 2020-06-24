@@ -5,17 +5,17 @@ import org.mockito.Mockito;
 import java.util.ArrayList;
 
 /**
- * @author Tino Böhmke
+ * @author TiXX BÃ¶hXXX
  * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514997@beuth-hochschule.de
- * @MatrikelNummer: 776097
+ * @s514XXX@beuth-hochschule.de
+ * @MatrikelNummer: 776XXX
  * @Datum 24.06.2019
  */
 
 public class BeispielMockEinfach {
 
 	/**
-	 * Array mit Lister verschiedenen Farben, welches durch einen Mock ersetzt
+	 * Array mit Liste verschiedener Farben, welches durch einen Mock ersetzt
 	 * werden soll
 	 */
 
@@ -42,8 +42,7 @@ public class BeispielMockEinfach {
 	}
 
 	/**
-	 * einfachste Form des Mocks, der Mock simuliert die ArrayList ein sogenannter
-	 * Proxy
+	 * einfachste Form des Mocks, der Mock simuliert die ArrayList 
 	 */
 
 	@Test
