@@ -1,10 +1,10 @@
 package junit;
 
 /**
- * @author Tino Böhmke
+ * @author TiXX BÃ¶hXXX
  * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514997@beuth-hochschule.de
- * @MatrikelNummer: 776097
+ * @s514XXX@beuth-hochschule.de
+ * @MatrikelNummer: 776XXX
  * @Datum 21.06.2019
  */
 
@@ -13,7 +13,7 @@ public class BeispielRechner {
 	}
 
 	/**
-	 * keiner Recher, der die 4 Grundrechenarten kann
+	 * keiner Recher mit den 4 Grundrechenarten
 	 */
 
 	public long Add(long a, long b) {
