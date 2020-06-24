@@ -3,7 +3,7 @@ Softwaretechnik 2020
 
 Einsendeaufgabe Testing
 
-Hallo Herr Edlich,
+Hallo Herr Prof. Dr. Edlich,
 
 ich habe Ihnen zu jeder Aufgabe 2 Beispiel gebastelt. 
 
