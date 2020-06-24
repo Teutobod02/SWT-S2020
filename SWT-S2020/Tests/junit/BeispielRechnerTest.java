@@ -6,10 +6,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author Tino Böhmke 
+ * @author TiXX BÃ¶hXXX 
  * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514997@beuth-hochschule.de
- * @MatrikelNummer: 776097
+ * @s514XXX@beuth-hochschule.de
+ * @MatrikelNummer: 776XXX
  * @Datum 21.06.2019
  */
 
@@ -23,7 +23,7 @@ public class BeispielRechnerTest {
 	}
 
 	/**
-	 * Testmethode für Addition (long+long)
+	 * Testmethode fÃ¼r Addition (long+long)
 	 */
 	@Test
 	public final void testAdd() {
@@ -38,7 +38,7 @@ public class BeispielRechnerTest {
 	}
 
 	/**
-	 * Testmethode für Subtraktion (long-long)
+	 * Testmethode fÃ¼r Subtraktion (long-long)
 	 */
 	@Test
 	public final void testSub() {
@@ -53,7 +53,7 @@ public class BeispielRechnerTest {
 	}
 
 	/**
-	 * Testmethode für Multiplitation (long*long)
+	 * Testmethode fÃ¼r Multiplitation (long*long)
 	 */
 	
 	@Test
@@ -73,7 +73,7 @@ public class BeispielRechnerTest {
 	}
 
 	/**
-	 * Testmethode für Division (long/long)
+	 * Testmethode fÃ¼r Division (long/long)
 	 */
 	@Test
 	public final void testDiv() {
@@ -87,7 +87,7 @@ public class BeispielRechnerTest {
 	}
 	
 	/**
-	 * Testmethode für Division (long/long) mit der gewünschten Exception 
+	 * Testmethode fÃ¼r Division (long/long) mit der gewÃ¼nschten Exception 
 	 */
 	
 	@Test(expected = IllegalArgumentException.class)
