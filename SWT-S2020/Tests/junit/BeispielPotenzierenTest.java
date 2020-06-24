@@ -15,7 +15,7 @@ import org.junit.Test;
 public class BeispielPotenzierenTest {
 
 	/**
-	 * zweites kleier Test für meine potenzierte Rechenoperationen
+	 * zweiter kleier Test für potenzierte Rechenoperationen
 	 */
 
 	private BeispielPotenzieren beispielPotenzieren;
