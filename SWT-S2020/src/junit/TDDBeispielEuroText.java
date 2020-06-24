@@ -4,24 +4,24 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @author Tino Böhmke
+ * @author TiXX BÃ¶hXXX
  * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514997@beuth-hochschule.de
- * @MatrikelNummer: 776097
+ * @s514XXX@beuth-hochschule.de
+ * @MatrikelNummer: 776XXX
  * @Datum 21.06.2019
  */
 
 public class TDDBeispielEuroText {
 
 	/**
-	 * kleines Beispiel zu zwei möglichen Test für Ihren Buchautor dem die
+	 * kleines Beispiel zu zwei mÃ¶glichen Test fÃ¼r Ihren Buchautor, dem die
 	 * Buchstaben bezahlt werden soll
 	 */
 
 	@Test
 	public final void whenStringIsSubmittedThenNoExceptionIsThrown() {
 		Assert.assertEquals(true, Character.isLetter('A'));
-		// prüfen ob übergebenes Value ein Buchstabe ist
+		// prÃ¼fen ob Ã¼bergebenes Value ein Buchstabe ist
 		Assert.assertTrue(true);
 
 	}
@@ -29,7 +29,7 @@ public class TDDBeispielEuroText {
 	@Test
 	public final void whenWhitespacesareSubmittedThenNoExceptionIsThrown() {
 		Assert.assertEquals(true, Character.isSpaceChar(' '));
-		// prüfen ob übergebenes Value ein Leerzeichen ist, die bezahle ich nicht
+		// prÃ¼fen ob Ã¼bergebenes Value ein Leerzeichen ist, die bezahle ich nicht
 		Assert.assertTrue(true);
 
 	}
