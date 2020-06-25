@@ -46,8 +46,7 @@ public class BeispielPotenzierenTest {
 	 */
 	public void testProdukt() throws Exception {
 		beispielPotenzieren.setAufgabe("Produkt");
-		// prüft die Berechnung eines Produktes mit einer in die Methode gegebenen Zahl
-		// * 2
+		// prüft die Berechnung eines Produktes mit einer in die Methode gegebenen Zahl * 2
 		assertTrue("Produkt von '4x2' muss '8' sein.", 8 == beispielPotenzieren.myMethod(4));
 	}
 
