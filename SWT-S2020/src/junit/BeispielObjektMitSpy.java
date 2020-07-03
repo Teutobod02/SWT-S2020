@@ -6,10 +6,10 @@ import org.mockito.Mockito;
 
 /**
  * @author TiXX BöhXXX
- * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514XXX@beuth-hochschule.de
- * @MatrikelNummer: 776XXX
- * @Datum 24.06.2019
+ * Softwaretechnik (BHTB MIB 13 S20)
+ * s514XXX@beuth-hochschule.de
+ * MatrikelNummer: 776XXX
+ * Datum 24.06.2019
  */
 
 public class BeispielObjektMitSpy {
