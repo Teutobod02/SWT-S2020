@@ -8,7 +8,7 @@ Hallo Herr Prof. Dr. Edlich,
 hier finden Sie meine Einsendeaufgabe Testing und Einsendeaufgabe Buildmanagement.
 
 
-Zur Testing habe ich Ihnen je 2 Beispiel erstellt. 
+Zur Einsendeaufgabe Testing habe ich Ihnen je 2 Beispiel erstellt: 
 
 Aufgabe 1 & 2 
 
@@ -22,3 +22,9 @@ Zu dieser Aufgabe ist in "TDDBeispielEuroText" = "https://github.com/Teutobod02/
 Aufgabe 4
 
 Hier haben ich unter "BeispielMock" einen einfachen Mock gebaut, wo ein Array mit einer Liste von Farben durch den Mock ersetzt wird -> "BeispielMockEinfach" = "https://github.com/Teutobod02/SWT-S2020/blob/master/SWT-S2020/src/junit/BeispielMockEinfach.java". In einem zweiten Mock prüfe ich mit einem Spy ob die Methode PermissionChecker ausgeführt wird. Das Beispiel für diesen Mock finden Sie unter "BeispielObjektMitSpy" = "https://github.com/Teutobod02/SWT-S2020/blob/master/SWT-S2020/src/junit/BeispielObjektMitSpy.java", in dem Beispiel hat nur der Admin Schreibrechte, darum prüfe ich mit dem Spy ob die Methode PermissionChecker ausgeführt wurde. 
+Alles weiter dazu im PDF in Moodle.
+
+
+Zur Einsendeaufgabe Buildmanagement zum 05.07.2020.
+
+Für diese Aufgaben finden Sie das entprechende Buildfile unter https://github.com/Teutobod02/SWT-S2020/blob/master/BeispielAnt/Build.xml. Die Klasse finden Sie unter  https://github.com/Teutobod02/SWT-S2020/blob/master/BeispielAnt/src/junit/BeispielRechner.java und den Test dazu hier: https://github.com/Teutobod02/SWT-S2020/blob/master/BeispielAnt/Tests/junit/BeispielRechnerTest.java. Alles weiter dazu im PDF in Moodle.
