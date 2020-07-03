@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="Tino-PC" name="BeispielRechnerTest" skipped="0" tests="1" time="0.0" timestamp="2020-07-02T21:16:56">
+  <properties>
+    <property name="ant.library.dir" value="C:\Users\tinob\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
+    <property name="env.NUMBER_OF_PROCESSORS" value="4" />
+    <property name="env.USERPROFILE" value="C:\Users\tinob" />
+    <property name="java.specification.version" value="13" />
+    <property name="ant.project.name" value="BeispielAnt" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="java.vendor.url" value="https://java.oracle.com/" />
+    <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
+    <property name="env.OS" value="Windows_NT" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner BeispielRechnerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,G:\Cloud\OneDrive\Dokumente\Wirtschaftsinformatik Beuth\alles Java\GitHub\BeispielAnt\junit\TEST-BeispielRechnerTest.xml crashfile=G:\Cloud\OneDrive\Dokumente\Wirtschaftsinformatik Beuth\alles Java\GitHub\BeispielAnt\junitvmwatcher12187720653744245178.properties propsfile=G:\Cloud\OneDrive\Dokumente\Wirtschaftsinformatik Beuth\alles Java\GitHub\BeispielAnt\junit16605252114869647777.properties" />
+    <property name="jdk.debug" value="release" />
+    <property name="env.ComSpec" value="C:\Windows\system32\cmd.exe" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="java.version.date" value="2020-01-14" />
+    <property name="java.home" value="C:\Program Files\Java\jdk-13.0.2" />
+    <property name="file.separator" value="\" />
+    <property name="basedir" value="G:\Cloud\OneDrive\Dokumente\Wirtschaftsinformatik Beuth\alles Java\GitHub\BeispielAnt" />
+    <property name="env.ProgramFiles" value="C:\Program Files" />
+    <property name="java.vm.compressedOopsMode" value="32-bit" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="env.PROMPT" value="$P$G" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="env.LOCALAPPDATA" value="C:\Users\tinob\AppData\Local" />
+    <property name="env.USERDOMAIN_ROAMINGPROFILE" value="TINO-PC" />
+    <property name="env.PROCESSOR_REVISION" value="3001" />
+    <property name="user.script" value="" />
+    <property name="env.PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="env.PROCESSOR_IDENTIFIER" value="AMD64 Family 21 Model 48 Stepping 1, AuthenticAMD" />
+    <property name="java.runtime.version" value="13.0.2+8" />
+    <property name="user.name" value="tinob" />
+    <property name="env.DriverData" value="C:\Windows\System32\Drivers\DriverData" />
+    <property name="env.ProgramW6432" value="C:\Program Files" />
+    <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
+    <property name="env.PUBLIC" value="C:\Users\Public" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="env.COMPUTERNAME" value="TINO-PC" />
+    <property name="env.HOMEPATH" value="\Users\tinob" />
+    <property name="env.APPDATA" value="C:\Users\tinob\AppData\Roaming" />
+    <property name="env.SystemDrive" value="C:" />
+    <property name="env.ProgramData" value="C:\ProgramData" />
+    <property name="java.io.tmpdir" value="C:\Users\tinob\AppData\Local\Temp\" />
+    <property name="java.version" value="13.0.2" />
+    <property name="env.HOMEDRIVE" value="C:" />
+    <property name="env.PROCESSOR_LEVEL" value="21" />
+    <property name="env.Path" value="C:/Program Files/Java/jdk-13.0.2/bin/server;C:/Program Files/Java/jdk-13.0.2/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-13.0.2\bin;C:\Users\tinob\AppData\Local\Microsoft\WindowsApps;C:\Users\tinob\AppData\Local\GitHubDesktop\bin;C:\Users\tinob\AppData\Local\atom\bin;G:\Cloud\OneDrive\Desktop;" />
+    <property name="env.TMP" value="C:\Users\tinob\AppData\Local\Temp" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.home" value="C:\Users\tinob\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.8 compiled on May 10 2020" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk-13.0.2/bin/server;C:/Program Files/Java/jdk-13.0.2/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-13.0.2\bin;C:\Users\tinob\AppData\Local\Microsoft\WindowsApps;C:\Users\tinob\AppData\Local\GitHubDesktop\bin;C:\Users\tinob\AppData\Local\atom\bin;G:\Cloud\OneDrive\Desktop;;." />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="env.LOGONSERVER" value="\\TINO-PC" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="java.class.path" value="G:\Cloud\OneDrive\Dokumente\Wirtschaftsinformatik Beuth\alles Java\GitHub\BeispielAnt\bin;C:\Users\tinob\.p2\pool\plugins\org.junit_4.13.0.v20200204-1500.jar;C:\Users\tinob\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\tinob\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-launcher.jar;C:\Users\tinob\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant.jar;C:\Users\tinob\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-junit.jar;C:\Users\tinob\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-junit4.jar" />
+    <property name="source" value="13" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
+    <property name="user.variant" value="" />
+    <property name="env.SystemRoot" value="C:\Windows" />
+    <property name="os.name" value="Windows 10" />
+    <property name="java.vm.specification.version" value="13" />
+    <property name="user.country" value="DE" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="env.USERDOMAIN" value="TINO-PC" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="user.home" value="C:\Users\tinob" />
+    <property name="user.language" value="de" />
+    <property name="ant.java.version" value="13" />
+    <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
+    <property name="ant.file.type.BeispielAnt" value="file" />
+    <property name="env.SESSIONNAME" value="Console" />
+    <property name="env.ANT_HOME" value="C:\Users\tinob\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239" />
+    <property name="env.windir" value="C:\Windows" />
+    <property name="ant.file" value="G:\Cloud\OneDrive\Dokumente\Wirtschaftsinformatik Beuth\alles Java\GitHub\BeispielAnt\buildAuto.xml" />
+    <property name="path.separator" value=";" />
+    <property name="os.version" value="10.0" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
+    <property name="ant.project.invoked-targets" value="BeispielRechnerTest (2)" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="ant.core.lib" value="C:\Users\tinob\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant.jar" />
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/" />
+    <property name="user.dir" value="G:\Cloud\OneDrive\Dokumente\Wirtschaftsinformatik Beuth\alles Java\GitHub\BeispielAnt" />
+    <property name="os.arch" value="amd64" />
+    <property name="env.USERNAME" value="tinob" />
+    <property name="env.OneDriveConsumer" value="G:\Cloud\OneDrive" />
+    <property name="ant.file.BeispielAnt" value="G:\Cloud\OneDrive\Dokumente\Wirtschaftsinformatik Beuth\alles Java\GitHub\BeispielAnt\buildAuto.xml" />
+    <property name="target" value="13" />
+    <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="java.vm.version" value="13.0.2+8" />
+    <property name="env.TEMP" value="C:\Users\tinob\AppData\Local\Temp" />
+    <property name="java.class.version" value="57.0" />
+    <property name="env.OneDrive" value="G:\Cloud\OneDrive" />
+    <property name="ant.project.default-target" value="build" />
+  </properties>
+  <error message="BeispielRechnerTest" type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException: BeispielRechnerTest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:416)
+</error>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
