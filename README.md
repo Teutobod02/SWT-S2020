@@ -1,11 +1,14 @@
 # SWT-S2020
 Softwaretechnik 2020
 
-Einsendeaufgabe Testing
+
 
 Hallo Herr Prof. Dr. Edlich,
 
-ich habe Ihnen zu jeder Aufgabe 2 Beispiel erstellt. 
+hier finden Sie meine Einsendeaufgabe Testing und Einsendeaufgabe Buildmanagement.
+
+
+Zur Testing habe ich Ihnen je 2 Beispiel erstellt. 
 
 Aufgabe 1 & 2 
 
