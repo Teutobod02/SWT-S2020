@@ -69,6 +69,11 @@
 		<echo message="========== Done Building default package ==========" />
 	</target>
 
+	<!-- Collective task -->
+	<target name="all" depends="docs, jar, junit Test" description="Builds Javadoc and JAR.">
+		<echo message="========== Done Building (all) ==========" />
+	</target>
+
 	<!-- Calculate the buildversion-->
 	<target name="calculate.version.build">
 		<script language="javascript">
@@ -112,16 +117,6 @@
 		<echo message="========== Done clean ==========" />
 	</target>
 
-	<!-- Creates the  build  directory-->
-	<target name="makedir">
-		<mkdir dir="${build.dir}" />
-		<mkdir dir="${docs.dir}" />
-		<mkdir dir="${dist.dir}" />
-		<mkdir dir="${lib.dir}" />
-		<mkdir dir="${test.report.dir}" />
-		<echo message="========== Done Creates build  directory ==========" />
-	</target>
-
 	<!-- Compiles the java code Main(including the usage of library for JUnit -->
 	<target name="compile" depends="clean, makedir">
 		<javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="build.classpath" debug="false" debuglevel="lines,source" optimize="true">
@@ -134,13 +129,6 @@
 		<echo message="========== Done Compile ==========" />
 	</target>
 
-	<!-- Create one line per classpath element-->
-	<pathconvert pathsep="${line.separator}" property="echo.classpath" refid="JUnit 4.libraryclasspath" />
-
-	<!-- Write the result to the console -->
-	<echo message="The following classpath is associated with junit.class.path " />
-	<echo message="${echo.classpath}" />
-
 	<!-- Creates Javadoc -->
 	<target name="docs" depends="compile">
 		<javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
@@ -150,6 +138,14 @@
 			</fileset>
 		</javadoc>
 		<echo message="========== Done Building (Javadoc) ==========" />
+	</target>
+
+	<target name="help">
+		<java classname="org.apache.tools.ant.Main">
+			<arg value="-projecthelp" />
+			<arg value="-buildfile" />
+			<arg value="${ant.file}" />
+		</java>
 	</target>
 
 	<!--Creates the deployable jar file  -->
@@ -197,23 +193,27 @@
 		<echo message="========== Done Building (JUnit Reports) ==========" />
 	</target>
 
-	<!-- run program  -->
-		<target name="run" depends="compile" description="Start the program."> 
-		</target>
-
-	<target name="help">
-	    <java classname="org.apache.tools.ant.Main">
-	        <arg value="-projecthelp" />
-	        <arg value="-buildfile" />
-	        <arg value="${ant.file}" />
-	    </java>
+	<!-- Creates the  build  directory-->
+	<target name="makedir">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${docs.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${lib.dir}" />
+		<mkdir dir="${test.report.dir}" />
+		<echo message="========== Done Creates build directory ==========" />
 	</target>
-	
-	<!-- Collective task -->
-	  <target name="all" depends="docs, jar, junit Test" description="Builds Javadoc and JAR.">
-	    <echo message="========== Done Building (all) ==========" />
-	  </target>
-	
+
+	<!-- Create one line per classpath element-->
+	<pathconvert pathsep="${line.separator}" property="echo.classpath" refid="JUnit 4.libraryclasspath" />
+
+	<!-- Write the result to the console -->
+	<echo message="The following classpath is associated with junit.class.path " />
+	<echo message="${echo.classpath}" />
+
+	<!-- run program  -->
+	<target name="run" depends="compile" description="Start the program.">
+	</target>
+
 	<!-- Creates the new buildversion-->
 	<target name="update.version.build" depends="calculate.version.build">
 		<propertyfile file="${versionFileName}">
