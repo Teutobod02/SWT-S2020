@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ====================================================================== 
-     02.07.2020 14:53:00                                                        
+<!-- ======================================================================
+     02.07.2020 14:53:00
 
-     project    
+     project
      description
-                   
+
      TiXX BöhXXX
      Softwaretechnik (BHTB MIB 13 S20)
      s514XXX@beuth-hochschule.de
-     MatrikelNummer: 776XXX                                                                
+     MatrikelNummer: 776XXX
      ====================================================================== -->
 <project name="BeispielAnt" default="run" basedir=".">
 	<!-- Sets variables which can later be used -->
@@ -66,13 +66,18 @@
 			<jvmarg line="-ea" />
 			<classpath refid="run.(default package).classpath" />
 		</junit>
-		<echo message="========== Done Building default package ==========" />
+		<echo message="========== creation of default package build DONE ==========" />
+	</target>
+
+	<!-- Collective task -->
+	<target name="all" depends="docs, jar, junit Test" description="Builds Javadoc and JAR.">
+		<echo message="========== Build (all) DONE ==========" />
 	</target>
 
 	<!-- Calculate the buildversion-->
 	<target name="calculate.version.build">
 		<script language="javascript">
-			<![CDATA[             
+			<![CDATA[
 		            var currentVersion = project.getProperty("currentVersion");
 		            var oldVersion = project.getProperty("version.number");
 		            var buildNumber = project.getProperty("build.number");
@@ -85,7 +90,7 @@
 		            }
 		        ]]>
 		</script>
-		<echo message="========== Done calculate current Version ==========" />
+		<echo message="==========  calculating of current Version DONE ==========" />
 	</target>
 
 	<!--Create a classpath container which can be later used in the ant task-->
@@ -109,17 +114,7 @@
 		<delete>
 			<fileset dir="." includes="**/*~" defaultexcludes="no" />
 		</delete>
-		<echo message="========== Done clean ==========" />
-	</target>
-
-	<!-- Creates the  build  directory-->
-	<target name="makedir">
-		<mkdir dir="${build.dir}" />
-		<mkdir dir="${docs.dir}" />
-		<mkdir dir="${dist.dir}" />
-		<mkdir dir="${lib.dir}" />
-		<mkdir dir="${test.report.dir}" />
-		<echo message="========== Done Creates build  directory ==========" />
+		<echo message="==========  cleanup DONE ==========" />
 	</target>
 
 	<!-- Compiles the java code Main(including the usage of library for JUnit -->
@@ -131,15 +126,8 @@
 		<!-- Compiles the java code Test for JUnit -->
 		<javac srcdir="${test.dir}" destdir="${build.dir}" classpathref="JUnit 4.libraryclasspath" debug="true" debuglevel="lines,source" optimize="true">
 		</javac>
-		<echo message="========== Done Compile ==========" />
+		<echo message="==========  Compile DONE ==========" />
 	</target>
-
-	<!-- Create one line per classpath element-->
-	<pathconvert pathsep="${line.separator}" property="echo.classpath" refid="JUnit 4.libraryclasspath" />
-
-	<!-- Write the result to the console -->
-	<echo message="The following classpath is associated with junit.class.path " />
-	<echo message="${echo.classpath}" />
 
 	<!-- Creates Javadoc -->
 	<target name="docs" depends="compile">
@@ -149,7 +137,30 @@
 				<include name="**" />
 			</fileset>
 		</javadoc>
-		<echo message="========== Done Building (Javadoc) ==========" />
+		<echo message="==========  Build (Javadoc) DONE ==========" />
+	</target>
+
+	<!-- check for XSD support in the parser -->
+	<condition property="xmlschema.present">
+		<or>
+			<parsersupports feature="http://apache.org/xml/features/validation/schema"/>
+			<parsersupports feature="http://java.sun.com/xml/jaxp/properties/schemaSource"/>
+		</or>
+	</condition>
+
+	<!-- generate the projecthelp -->
+	<target name="help">
+		<java classname="org.apache.tools.ant.Main">
+			<arg value="-projecthelp" />
+			<arg value="-buildfile" />
+			<arg value="${ant.file}" />
+		</java>
+		<!-- download files from apache.org -->
+		<get dest="downloads">
+			<url url="https://ant.apache.org/index.html" />
+			<url url="https://ant.apache.org/faq.html" />
+		</get>
+		<get src="https://www.apache.org/index.html" dest="Index" verbose="true" usetimestamp="true" />
 	</target>
 
 	<!--Creates the deployable jar file  -->
@@ -168,7 +179,7 @@
 				<attribute name="Main-Class" value="Main" />
 			</manifest>
 		</jar>
-		<echo message="========== Done Building (Done Building (JAR)) ==========" />
+		<echo message="========== Build (Done Building (JAR)) DONE ==========" />
 	</target>
 
 	<!-- Run the JUnit Tests + Output is XML, could also be plain-->
@@ -183,7 +194,7 @@
 				</fileset>
 			</batchtest>
 		</junit>
-		<echo message="========== Done JUnit Test ==========" />
+		<echo message="========== JUnit Test DONE ==========" />
 	</target>
 
 	<!-- JUnit reports -->
@@ -197,23 +208,28 @@
 		<echo message="========== Done Building (JUnit Reports) ==========" />
 	</target>
 
-	<!-- run program  -->
-		<target name="run" depends="compile" description="Start the program."> 
-		</target>
-
-	<target name="help">
-	    <java classname="org.apache.tools.ant.Main">
-	        <arg value="-projecthelp" />
-	        <arg value="-buildfile" />
-	        <arg value="${ant.file}" />
-	    </java>
+	<!-- Creates the  build  directory-->
+	<target name="makedir">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${docs.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${lib.dir}" />
+		<mkdir dir="${test.report.dir}" />
+		<echo message="========== creaion of build directory DONE ==========" />
 	</target>
-	
-	<!-- Collective task -->
-	  <target name="all" depends="docs, jar, junit Test" description="Builds Javadoc and JAR.">
-	    <echo message="========== Done Building (all) ==========" />
-	  </target>
-	
+
+	<!-- Create one line per classpath element-->
+	<pathconvert pathsep="${line.separator}" property="echo.classpath" refid="JUnit 4.libraryclasspath" />
+
+	<!-- Write the result to the console -->
+	<echo message="The following classpath is associated with junit.class.path " />
+	<echo message="${echo.classpath}" />
+
+	<!-- run program  -->
+	<target name="run" depends="compile" description="Start the program.">
+		<echo message="========== Program was started ==========" />
+	</target>
+
 	<!-- Creates the new buildversion-->
 	<target name="update.version.build" depends="calculate.version.build">
 		<propertyfile file="${versionFileName}">
