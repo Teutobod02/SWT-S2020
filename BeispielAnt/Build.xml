@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ====================================================================== 
      02.07.2020 14:53:00                                                        
-
      project    
      description
                    
@@ -17,13 +16,12 @@
 	<property name="build.dir" location="bin" />
 	<property name="dist.dir" location="dist" />
 	<property name="docs.dir" location="docs" />
-	<property name="lib.dir" location="lib" />
 	<property name="versionFileName" value="build.properties" />
 	<property file="${versionFileName}" />
 	<property name="currentVersion" value="1.0" />
 	<!-- Variables used for JUnit testing -->
 	<property name="test.dir" location="Tests" />
-	<property name="junit.output.dir" value="junit" />
+	<property name="output.dir" value="junit" />
 	<property name="debuglevel" value="source,lines,vars" />
 	<property name="test.report.dir" location="testreport" />
 	<property name="build.sysclasspath" value="last" />
@@ -60,7 +58,7 @@
 
 	<!--Create the default package-->
 	<target name="(default package)">
-		<mkdir dir="${junit.output.dir}" />
+		<mkdir dir="${output.dir}" />
 		<junit fork="yes" printsummary="withOutAndErr">
 			<formatter type="xml" />
 			<jvmarg line="-ea" />
@@ -81,7 +79,6 @@
 		            var currentVersion = project.getProperty("currentVersion");
 		            var oldVersion = project.getProperty("version.number");
 		            var buildNumber = project.getProperty("build.number");
-
 		            if (!currentVersion.equals(oldVersion)){
 		                project.setProperty("currentBuild", 1);
 		            } else {
@@ -108,9 +105,8 @@
 		<delete dir="${docs.dir}" />
 		<delete dir="${dist.dir}" />
 		<delete dir="${lib.dir}" />
-
 		<delete dir="${test.report.dir}" />
-		<delete dir="${defaultdist.dir}" />
+ 		<delete dir="${defaultdist.dir}" />
 		<delete>
 			<fileset dir="." includes="**/*~" defaultexcludes="no" />
 		</delete>
@@ -176,7 +172,7 @@
 				</archives>
 			</restrict>
 			<manifest>
-				<attribute name="Main-Class" value="Main" />
+				<attribute name="Main-Class" value="main" />
 			</manifest>
 		</jar>
 		<echo message="========== Build (Done Building (JAR)) DONE ==========" />
@@ -199,14 +195,13 @@
 
 	<!-- JUnit reports -->
 	<target name="junitreport">
-		<junitreport todir="${junit.output.dir}">
-			<fileset dir="${junit.output.dir}">
-				<include name="TEST-*.xml" />
-			</fileset>
-			<report format="frames" todir="${junit.output.dir}" />
-		</junitreport>
-		<echo message="========== Done Building (JUnit Reports) ==========" />
-	</target>
+	        <junitreport todir="${output.dir}">
+	            <fileset dir="${output.dir}">
+	                <include name="TEST-*.xml"/>
+	            </fileset>
+	            <report format="frames" todir="${output.dir}"/>
+	        </junitreport>
+	    </target>
 
 	<!-- Creates the  build  directory-->
 	<target name="makedir">
@@ -215,7 +210,8 @@
 		<mkdir dir="${dist.dir}" />
 		<mkdir dir="${lib.dir}" />
 		<mkdir dir="${test.report.dir}" />
-		<echo message="========== creaion of build directory DONE ==========" />
+		<mkdir dir="${output.dir}" />
+ 		<echo message="========== creaion of build directory DONE ==========" />
 	</target>
 
 	<!-- Create one line per classpath element-->
@@ -226,7 +222,7 @@
 	<echo message="${echo.classpath}" />
 
 	<!-- run program  -->
-	<target name="run" depends="compile" description="Start the program.">
+	<target name="run" depends="compile, jar, junit Test, docs " description="Start the program.">
 		<echo message="========== Program was started ==========" />
 	</target>
 	
