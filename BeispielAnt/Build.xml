@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<!-- ======================================================================
-     02.07.2020 14:53:00
-
-     project
-=======
 <!-- ====================================================================== 
-     05.07.2020 14:53:00                                                        
+     02.07.2020 14:53:00                                                        
      project    
->>>>>>> f2de60e9464fc50096e351de810b0b73c9189ace
      description
-
+                   
      TiXX BöhXXX
      Softwaretechnik (BHTB MIB 13 S20)
      s514XXX@beuth-hochschule.de
-     MatrikelNummer: 776XXX
+     MatrikelNummer: 776XXX                                                                
      ====================================================================== -->
 <project name="BeispielAnt" default="run" basedir=".">
 	<!-- Sets variables which can later be used -->
@@ -64,7 +57,7 @@
 	</path>
 
 	<!--Create the default package-->
-	<target name="(default package)">
+	<target name="default package">
 		<mkdir dir="${output.dir}" />
 		<junit fork="yes" printsummary="withOutAndErr">
 			<formatter type="xml" />
@@ -75,14 +68,14 @@
 	</target>
 
 	<!-- Collective task -->
-	<target name="all" depends="docs, jar, junit Test" description="Builds Javadoc and JAR.">
+	<target name="all" depends="run, calculate.version.build, compile, clean, default package, docs, help, jar, junitreport, junit Test, makedir, update.version.build" description="Builds all Targets">
 		<echo message="========== Build (all) DONE ==========" />
 	</target>
 
 	<!-- Calculate the buildversion-->
 	<target name="calculate.version.build">
 		<script language="javascript">
-			<![CDATA[
+			<![CDATA[             
 		            var currentVersion = project.getProperty("currentVersion");
 		            var oldVersion = project.getProperty("version.number");
 		            var buildNumber = project.getProperty("build.number");
@@ -113,7 +106,7 @@
 		<delete dir="${dist.dir}" />
 		<delete dir="${lib.dir}" />
 		<delete dir="${test.report.dir}" />
- 		<delete dir="${defaultdist.dir}" />
+		<delete dir="${defaultdist.dir}" />
 		<delete>
 			<fileset dir="." includes="**/*~" defaultexcludes="no" />
 		</delete>
@@ -202,13 +195,13 @@
 
 	<!-- JUnit reports -->
 	<target name="junitreport">
-	        <junitreport todir="${output.dir}">
-	            <fileset dir="${output.dir}">
-	                <include name="TEST-*.xml"/>
-	            </fileset>
-	            <report format="frames" todir="${output.dir}"/>
-	        </junitreport>
-	    </target>
+		<junitreport todir="${output.dir}">
+			<fileset dir="${output.dir}">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report format="frames" todir="${output.dir}"/>
+		</junitreport>
+	</target>
 
 	<!-- Creates the  build  directory-->
 	<target name="makedir">
@@ -218,44 +211,24 @@
 		<mkdir dir="${lib.dir}" />
 		<mkdir dir="${test.report.dir}" />
 		<mkdir dir="${output.dir}" />
- 		<echo message="========== creaion of build directory DONE ==========" />
-	</target>
-
-<<<<<<< HEAD
-	<!-- Creates the  build  directory-->
-	<target name="makedir">
-		<mkdir dir="${build.dir}" />
-		<mkdir dir="${docs.dir}" />
-		<mkdir dir="${dist.dir}" />
-		<mkdir dir="${lib.dir}" />
-		<mkdir dir="${test.report.dir}" />
 		<echo message="========== creaion of build directory DONE ==========" />
 	</target>
 
 	<!-- Create one line per classpath element-->
 	<pathconvert pathsep="${line.separator}" property="echo.classpath" refid="JUnit 4.libraryclasspath" />
 
-=======
-	<!-- Create one line per classpath element-->
-	<pathconvert pathsep="${line.separator}" property="echo.classpath" refid="JUnit 4.libraryclasspath" />
-
->>>>>>> f2de60e9464fc50096e351de810b0b73c9189ace
 	<!-- Write the result to the console -->
 	<echo message="The following classpath is associated with junit.class.path " />
 	<echo message="${echo.classpath}" />
 
 	<!-- run program  -->
-<<<<<<< HEAD
-	<target name="run" depends="compile" description="Start the program.">
-		<echo message="========== Program was started ==========" />
+	<target name="run" depends="compile, jar, junit Test" description="Start the program.">
+		<tstamp>
+			<format property="time.of.day" pattern="hh:mm aa " locale="de" />
+		</tstamp>
+		<echo message="========== Program was started: ${time.of.day} ==========" />
 	</target>
 
-=======
-	<target name="run" depends="compile, jar, junit Test, docs " description="Start the program.">
-		<echo message="========== Program was started ==========" />
-	</target>
-	
->>>>>>> f2de60e9464fc50096e351de810b0b73c9189ace
 	<!-- Creates the new buildversion-->
 	<target name="update.version.build" depends="calculate.version.build">
 		<propertyfile file="${versionFileName}">
