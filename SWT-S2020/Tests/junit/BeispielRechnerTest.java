@@ -7,10 +7,10 @@ import org.junit.Test;
 
 /**
  * @author TiXX BöhXXX 
- * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514XXX@beuth-hochschule.de
- * @MatrikelNummer: 776XXX
- * @Datum 21.06.2019
+ * Softwaretechnik (BHTB MIB 13 S20)
+ * s514XXX@beuth-hochschule.de
+ * MatrikelNummer: 776XXX
+ * Datum 21.06.2019
  */
 
 public class BeispielRechnerTest {
