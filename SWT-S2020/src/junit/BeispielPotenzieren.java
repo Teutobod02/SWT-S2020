@@ -14,7 +14,7 @@ public class BeispielPotenzieren {
 	/**
 	 * This is a small pocket calculator with arithmetic operations
 	 * variable are used is a.
-	 * @param a = operand1
+	 * @param a = operand
 	 * @return the result of the arithmetic operation
 	 */
 	
