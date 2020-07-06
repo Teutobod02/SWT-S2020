@@ -5,11 +5,11 @@ import org.mockito.Mockito;
 import java.util.ArrayList;
 
 /**
- * @author TiXX BöhXXX
- * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514XXX@beuth-hochschule.de
- * @MatrikelNummer: 776XXX
- * @Datum 24.06.2019
+ * @author TiXX BoehXXX 
+ * Softwaretechnik (BHTB MIB 13 S20)
+ * s514XXX@beuth-hochschule.de
+ * MatrikelNummer: 776XXX
+ * Datum 21.06.2019
  */
 
 public class BeispielMockEinfach {
