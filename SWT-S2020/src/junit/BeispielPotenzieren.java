@@ -2,18 +2,22 @@
 package junit;
 
 /**
- * @author TiXX BöhXXX
- * @Softwaretechnik (BHTB MIB 13 S20)
- * @s514XXX@beuth-hochschule.de
- * @MatrikelNummer: 776XXX
- * @Datum 22.06.2019
+ * @author TiXX BoehXXX 
+ * Softwaretechnik (BHTB MIB 13 S20)
+ * s514XXX@beuth-hochschule.de
+ * MatrikelNummer: 776XXX
+ * Datum 21.06.2019
  */
 
 public class BeispielPotenzieren {
 
 	/**
-	 * zweites kleies Beispiel, dieses mal für potenzierte Rechenoperationen 
+	 * This is a small pocket calculator with arithmetic operations
+	 * variable are used is a.
+	 * @param a = operand1
+	 * @return the result of the arithmetic operation
 	 */
+	
 
 	private String Aufgabe;
 
@@ -35,7 +39,7 @@ public class BeispielPotenzieren {
 		} else if ("Wurzel".equalsIgnoreCase(Aufgabe)) {
 			return Math.sqrt(a);
 		} else {
-			throw new Exception("Fehler: Korrekte Definition fehlt.");
+			throw new Exception("Error: Correct definition is missing.");
 		}
 	}
 }
