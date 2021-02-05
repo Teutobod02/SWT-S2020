@@ -46,3 +46,4 @@ CREATE TABLE `event` (
  PRIMARY KEY (`eventid`),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;)
 );
+```
