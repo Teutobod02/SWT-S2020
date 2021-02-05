@@ -33,9 +33,7 @@ Für diese Aufgaben finden Sie das entprechende Buildfile unter https://github.c
 
 ``SQL
 CREATE TABLE [datenbankname].`Veranstaltung` 
-CREATE TABLE `event` (
-
-`eventid` int(32) NOT NULL,
+(`eventid` int(32) NOT NULL,
 `name` varchar(80) NOT NULL,
 `categorie` varchar(80) NOT NULL,
 `descrition` text NOT NULL,
