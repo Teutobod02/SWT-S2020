@@ -29,3 +29,20 @@ Zur Einsendeaufgabe Buildmanagement zum 05.07.2020.
 
 Für diese Aufgaben finden Sie das entprechende Buildfile unter https://github.com/Teutobod02/SWT-S2020/blob/master/BeispielAnt/Build.xml. Die Klasse finden Sie unter https://github.com/Teutobod02/SWT-S2020/blob/master/BeispielAnt/src/de/boehmke/beispielrechner/BeispielRechner.java und den Test dazu hier: https://github.com/Teutobod02/SWT-S2020/blob/master/BeispielAnt/Tests/de/boehmke/beispielrechner/BeispielRechnerTest.java. Alles weiter dazu im PDF in Moodle.
 
+
+
+``SQL
+CREATE TABLE [datenbankname].`Veranstaltung` 
+CREATE TABLE `event` (
+
+`eventid` int(32) NOT NULL,
+`name` varchar(80) NOT NULL,
+`categorie` varchar(80) NOT NULL,
+`descrition` text NOT NULL,
+`enventdate` datetime(6) NOT NULL,
+`eventtime` time(6) NOT NULL,
+`location` varchar(80) NOT NULL,
+`portal` varchar(80) NOT NULL
+ PRIMARY KEY (`eventid`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;)
+);
