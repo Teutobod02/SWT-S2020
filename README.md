@@ -44,6 +44,5 @@ CREATE TABLE `event` (
 `location` varchar(80) NOT NULL,
 `portal` varchar(80) NOT NULL
  PRIMARY KEY (`eventid`),
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;)
 );
 ```
